@@ -15,16 +15,20 @@
   .item--1 {
     background-color: orangered;
     grid-row: 2 / 3;
-    grid-column: 2 / 3; }
+    grid-column: 2 / 3;
+    z-index: 2; }
   .item--2 {
-    background-color: yellowgreen; }
+    background-color: yellowgreen;
+    grid-column: 2 / -1; }
   .item--3 {
-    background-color: blueviolet; }
+    background-color: blueviolet;
+    grid-column: 1 / 3;
+    grid-row: 2 / 3; }
   .item--4 {
     background-color: palevioletred; }
   .item--5 {
     background-color: royalblue;
-    grid-row: 1 / 2;
+    grid-row: 1 / 3;
     grid-column: 3 / 4; }
   .item--6 {
     background-color: goldenrod;
