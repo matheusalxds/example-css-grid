@@ -92,3 +92,44 @@
     grid-column: 2 / 3;
   }
 }
+
+.challenge {
+
+  width: 1020px;
+  margin: 30px auto;
+
+  display: grid;
+  grid-gap: 20px;
+
+  grid-template-rows: 100px 200px 400px 100px;
+  grid-template-columns: repeat(3, 1fr) 200px;
+
+  & > * {
+    padding: 20px;
+    background-color: red;
+    color: white;
+    font-size: 30px;
+    font-family: sans-serif;
+  }
+
+  &__header {
+    grid-column: 1 / -1;
+  }
+
+  &__main-content {
+    grid-row: 3 / 4;
+    //grid-column: 1 / 4; // is more intuitive to use span
+    grid-column: 1 / span 3;
+  }
+
+  &__sidebar {
+    //grid-row: 2 / 4;
+    grid-row: 2 / span 2; // is more intuitive to use span
+    grid-column: 4 / 5;
+  }
+
+  &__footer {
+    grid-row: 4 / 5;
+    grid-column: 1 / -1;
+  }
+}
