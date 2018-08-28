@@ -190,10 +190,7 @@
   grid-template-rows: 100px 200px 400px 100px;
   grid-template-columns: repeat(3, 1fr) 200px;
 
-  grid-template-areas:  ". head head ."
-                        "box-1 box-2 box-3 side"
-                        "main main main side"
-                        "foot foot foot foot";
+  grid-template-areas: ". head head ." "box-1 box-2 box-3 side" "main main main side" "foot foot foot foot";
 
   & > * {
     padding: 20px;
@@ -243,14 +240,31 @@
   grid-auto-rows: 80px;
 
   // Change the default flow for column and not row
-  grid-auto-flow: column;
+  grid-auto-flow: row;
   grid-auto-columns: .5fr;
 
+  // STRETCH IS THE DEFAULT
+  align-items: center; // STRETCH / center / end / start
+  justify-items: center;
+
   .item2 {
-    padding: 20px;
+    padding: 10px;
     color: white;
     font-family: sans-serif;
     font-size: 30px;
     background-color: orangered;
+
+    &--4 {
+      background-color: crimson;
+      grid-row: 2 / span 3;
+      // align or justify self override the align of the container, so they'll align yourself
+      align-self: start;
+      justify-self: start;
+    }
+
+    &--7 {
+      background-color: palevioletred;
+      grid-column: 1 / -1;
+    }
   }
 }
