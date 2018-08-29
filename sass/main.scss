@@ -284,3 +284,58 @@
     }
   }
 }
+
+.container3 {
+  width: 1000px;
+  margin: 30px auto;
+  background-color: #ddd;
+
+  display: grid;
+  // Using min-content and max-content
+  // grid-template-rows: repeat(2, 150px);
+  // To use min-content, we can't use absolute width/height, we need to use dynamic width/height
+  // or we can use min-content like params of repeat too
+  // grid-template-columns: 1fr 1fr 1fr min-content;
+  // grid-template-rows: repeat(2, min-content);
+
+  // Using minmax function
+  grid-template-rows: repeat(2, minmax(150px, min-content));
+  grid-template-columns: minmax(200px, 300px) repeat(3, 1fr);
+
+  .item3 {
+    padding: 10px;
+    color: white;
+    font-family: sans-serif;
+    font-size: 30px;
+    background-color: #ddd;
+
+    &--1 {
+      background-color: orangered;
+    }
+    &--2 {
+      background-color: yellowgreen;
+    }
+    &--3 {
+      background-color: blueviolet;
+    }
+    &--4 {
+      background-color: palevioletred;
+    }
+    &--5 {
+      background-color: royalblue;
+    }
+    &--6 {
+      background-color: goldenrod;
+    }
+    &--7 {
+      background-color: crimson;
+    }
+    &--8 {
+      background-color: darkslategrey;
+    }
+  }
+}
+
+.u-margin-top {
+  margin-top: 15rem;
+}

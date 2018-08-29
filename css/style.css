@@ -176,3 +176,36 @@
     .container2 .item2--7 {
       background-color: palevioletred;
       grid-column: 1 / -1; }
+
+.container3 {
+  width: 1000px;
+  margin: 30px auto;
+  background-color: #ddd;
+  display: grid;
+  grid-template-rows: repeat(2, minmax(150px, min-content));
+  grid-template-columns: minmax(200px, 300px) repeat(3, 1fr); }
+  .container3 .item3 {
+    padding: 10px;
+    color: white;
+    font-family: sans-serif;
+    font-size: 30px;
+    background-color: #ddd; }
+    .container3 .item3--1 {
+      background-color: orangered; }
+    .container3 .item3--2 {
+      background-color: yellowgreen; }
+    .container3 .item3--3 {
+      background-color: blueviolet; }
+    .container3 .item3--4 {
+      background-color: palevioletred; }
+    .container3 .item3--5 {
+      background-color: royalblue; }
+    .container3 .item3--6 {
+      background-color: goldenrod; }
+    .container3 .item3--7 {
+      background-color: crimson; }
+    .container3 .item3--8 {
+      background-color: darkslategrey; }
+
+.u-margin-top {
+  margin-top: 15rem; }
